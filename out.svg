@@ -6,14 +6,14 @@
 [ModeButton|+watch: Watch|+changeMode(): void]
 [IncreaseButton|+watch: Watch;+time: Time;+mode: Number|+increaseTime(): void]
 [LightButton|+watch: Watch;+timeDisplay: HTMLElement;+isLightOn: boolean|+toggleLight(): void]
-[ResetButton|+watch: Watch|+resetTime(): void]
+[ResetButton||]
 [Button]&lt;:-[ModeButton]
 [Button]&lt;:-[IncreaseButton]
 [Button]&lt;:-[LightButton]
 [Button]&lt;:-[ResetButton]
 [ClockManager|-watches: Watch\[\]|+padNumber(): string;+addWatch(): void;+changeTimeFormat(): void;+resetAllClocks(): void]
 [Time|+currentTime: Date;+lastEditedTime: Date;+timeZone: number;+is24HourFormat: boolean|-updateTimeZone(): void;+padNumber(): string;+tick(): void;+setLastEditedTime(): void;+clearLastEditedTime(): void;+getTime(): Date;+getTimeZone(): number;+increaseHours(): void;+increaseMinutes(): void;+setTimeFormat(): void;+resetTime(): void;+formatTime(): string;+getTimeString(): string]
-[Watch|+time: Time;+mode: number;+timeDisplay: HTMLDivElement;+watchScreen: HTMLDivElement;+watchContainer: HTMLDivElement;+modeButton: ModeButton;+increaseButton: IncreaseButton;+lightButton: LightButton;+resetButton: ResetButton;+isLightOn: boolean;+intervalId: number;+is24HourFormat: boolean|+startTicking(): void;+updateTime(): void;+setMode(): void;+displayTime(): void;+increaseTime(): void;+setTimeFormat(): void;+reset(): void]
+[Watch|+time: Time;+mode: number;+timeDisplay: HTMLDivElement;+watchScreen: HTMLDivElement;+watchContainer: HTMLDivElement;+modeButton: ModeButton;+increaseButton: IncreaseButton;+lightButton: LightButton;+resetButton: ResetButton;+isLightOn: boolean;+intervalId: number;+is24HourFormat: boolean|+startTicking(): void;+updateTime(): void;+setMode(): void;+displayTime(): void;+increaseTime(): void;+setTimeFormat(): void;+resetTime(): void]
 [MyClass|-aNumber: number|+get(): number]</desc>
 <g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
 <g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
@@ -28,8 +28,8 @@
 <path d="M330.4 256.7 L325.1 256.3 L319.8 255.9 L326.0 243.0 Z"></path>
 <path d="M426.0 251.4 L569.5 368 L569.5 388 L569.5 388.0 " fill="none"></path>
 <path d="M429.4 247.3 L426.0 251.4 L422.7 255.5 L415.7 243.0 Z"></path>
-<path d="M490.1 238.8 L807.5 368 L807.5 403 L807.5 403.0 " fill="none"></path>
-<path d="M492.1 233.9 L490.1 238.8 L488.1 243.8 L477.8 233.8 Z"></path>
+<path d="M490.0 242.1 L784.5 368 L784.5 426 L784.5 426.0 " fill="none"></path>
+<path d="M492.1 237.2 L490.0 242.1 L487.9 247.0 L477.8 236.8 Z"></path>
 <g data-name="Button">
 <g fill="#eee8d5" stroke="#33322E" data-name="Button">
 <rect x="183.8" y="105.0" height="138.0" width="294.0" data-name="Button"></rect>
@@ -139,25 +139,23 @@
 </g>
 <g data-name="ResetButton">
 <g fill="#eee8d5" stroke="#33322E" data-name="ResetButton">
-<rect x="728.0" y="403.0" height="93.0" width="159.0" data-name="ResetButton"></rect>
-<path d="M728.0 434.0 L887.0 434.0" fill="none" data-name="ResetButton"></path>
-<path d="M728.0 465.0 L887.0 465.0" fill="none" data-name="ResetButton"></path>
+<rect x="728.0" y="426.0" height="47.0" width="113.0" data-name="ResetButton"></rect>
+<path d="M728.0 457.0 L841.0 457.0" fill="none" data-name="ResetButton"></path>
+<path d="M728.0 465.0 L841.0 465.0" fill="none" data-name="ResetButton"></path>
 </g>
-<g transform="translate(728, 403)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ResetButton">
+<g transform="translate(728, 426)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ResetButton">
 <g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ResetButton">
-<a id="src/class/Button.ts.ResetButton" xlink:href="src/class/Button.ts"><text x="71.5" y="13.5" stroke="none" text-anchor="middle" data-name="ResetButton">ResetButton</text></a>
+<a id="src/class/Button.ts.ResetButton" xlink:href="src/class/Button.ts"><text x="48.5" y="13.5" stroke="none" text-anchor="middle" data-name="ResetButton">ResetButton</text></a>
 
 </g>
 </g>
-<g transform="translate(728, 434)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ResetButton">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ResetButton">
-<text x="0.0" y="13.5" stroke="none" data-name="ResetButton">+watch: Watch</text>
+<g transform="translate(728, 457)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ResetButton">
+<g transform="translate(8, 8)" fill="#33322E" data-name="ResetButton">
 
 </g>
 </g>
 <g transform="translate(728, 465)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ResetButton">
-<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ResetButton">
-<text x="0.0" y="13.5" stroke="none" data-name="ResetButton">+resetTime(): void</text>
+<g transform="translate(8, 8)" fill="#33322E" data-name="ResetButton">
 
 </g>
 </g>
@@ -267,7 +265,7 @@
 <text x="0.0" y="58.5" stroke="none" data-name="Watch">+displayTime(): void</text>
 <text x="0.0" y="73.5" stroke="none" data-name="Watch">+increaseTime(): void</text>
 <text x="0.0" y="88.5" stroke="none" data-name="Watch">+setTimeFormat(): void</text>
-<text x="0.0" y="103.5" stroke="none" data-name="Watch">+reset(): void</text>
+<text x="0.0" y="103.5" stroke="none" data-name="Watch">+resetTime(): void</text>
 
 </g>
 </g>
