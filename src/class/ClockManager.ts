@@ -1,7 +1,7 @@
 import { Watch } from './Watch';
 
 export class ClockManager {
-    private watches: Watch[];
+    watches: Watch[];
 
     constructor() {
         this.watches = [];

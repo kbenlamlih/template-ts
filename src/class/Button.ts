@@ -4,7 +4,6 @@ import { Watch } from "./Watch";
 export class Button {
     element: HTMLButtonElement;
     watchContainer: HTMLDivElement;
-    isPressed : boolean;
     clickHandler: () => void;
   
     constructor(watchContainer: HTMLDivElement,id: string, clickHandler: () => void) {
@@ -63,8 +62,6 @@ export class IncreaseButton extends Button {
 }
 
 export class LightButton extends Button {
-
-    watch: Watch;
     timeDisplay : HTMLElement;
     isLightOn : boolean;
 

@@ -1,11 +1,26 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "allowJs": true
-  }
+    "target": "ES6",                           // Target modern JavaScript
+    "module": "commonjs",                      // Use CommonJS module system
+    "strict": true,                            // Enable all strict type-checking options
+    "esModuleInterop": true,                   // Enable compatibility with ES6 modules
+    "skipLibCheck": true,                      // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,  // Ensure consistent file casing
+    "baseUrl": ".",                            // Base directory to resolve non-relative module names
+    "paths": {
+      "*": ["src/*"]                           // Allow imports from 'src' directory
+    },
+    "outDir": "./dist",                        // Output directory for compiled files
+    "rootDir": "./src",                        // Root directory of input files
+    "sourceMap": true                          // Generate source maps for debugging
+  },
+  "include": [
+    "src",                                     // Include all files in the 'src' directory
+    "__tests__"                                // Include all files in the '__tests__' directory
+  ],
+  "exclude": [
+    "node_modules",                            // Exclude 'node_modules' directory
+    "dist"                                     // Exclude 'dist' directory
+  ]
 }
+
