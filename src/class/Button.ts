@@ -88,19 +88,13 @@ export class LightButton extends Button {
     }
 }
 
-export class ResetButton extends Button {
-    watch: Watch;
-    
+export class ResetButton extends Button {    
      constructor(watchContainer: HTMLDivElement, watch: Watch) {
-        super(watchContainer, "reset", () => this.resetTime);
+        super(watchContainer, "reset", () => watch.resetTime());
         this.element.classList.add("button", "button-reset");
         this.element.textContent = "Reset";
-        this.watch = watch;
     }
     
-    public resetTime() {
-        this.watch.reset();
-    }  
-    
+
 
 }

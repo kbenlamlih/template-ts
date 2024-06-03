@@ -26,7 +26,7 @@ export class ClockManager {
     }
 
     resetAllClocks() {
-        this.watches.forEach(watch => watch.reset());
+        this.watches.forEach(watch => watch.resetTime());
     }
 
 }

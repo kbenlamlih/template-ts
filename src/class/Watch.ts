@@ -88,8 +88,9 @@ export class Watch {
         this.updateTime();
     }
 
-    reset() {
-        this.time = new Time(this.time.getTimeZone(), this.time.is24HourFormat);
+    resetTime() {
+        this.time.resetTime();
         this.updateTime();
     }
+
 }
