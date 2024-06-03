@@ -1,0 +1,304 @@
+<svg version="1.1" baseProfile="full" width="1626.8" height="567.0" viewbox="0 0 1626.75 567" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<desc >#.interface: fill=lightblue
+#.enumeration: fill=lightgreen
+#.type: fill=lightgray
+[Button|+element: HTMLButtonElement;+watchContainer: HTMLDivElement;+isPressed: boolean;+clickHandler: () =&gt; void|-handleClick(): void]
+[ModeButton|+watch: Watch|+changeMode(): void]
+[IncreaseButton|+watch: Watch;+time: Time;+mode: Number|+increaseTime(): void]
+[LightButton|+watch: Watch;+timeDisplay: HTMLElement;+isLightOn: boolean|+toggleLight(): void]
+[ResetButton|+watch: Watch|+resetTime(): void]
+[Button]&lt;:-[ModeButton]
+[Button]&lt;:-[IncreaseButton]
+[Button]&lt;:-[LightButton]
+[Button]&lt;:-[ResetButton]
+[ClockManager|-watches: Watch\[\]|+padNumber(): string;+addWatch(): void;+changeTimeFormat(): void;+resetAllClocks(): void]
+[Time|+currentTime: Date;+lastEditedTime: Date;+timeZone: number;+is24HourFormat: boolean|-updateTimeZone(): void;+padNumber(): string;+tick(): void;+setLastEditedTime(): void;+clearLastEditedTime(): void;+getTime(): Date;+getTimeZone(): number;+increaseHours(): void;+increaseMinutes(): void;+setTimeFormat(): void;+resetTime(): void;+formatTime(): string;+getTimeString(): string]
+[Watch|+time: Time;+mode: number;+timeDisplay: HTMLDivElement;+watchScreen: HTMLDivElement;+watchContainer: HTMLDivElement;+modeButton: ModeButton;+increaseButton: IncreaseButton;+lightButton: LightButton;+resetButton: ResetButton;+isLightOn: boolean;+intervalId: number;+is24HourFormat: boolean|+startTicking(): void;+updateTime(): void;+setMode(): void;+displayTime(): void;+increaseTime(): void;+setTimeFormat(): void;+reset(): void]
+[MyClass|-aNumber: number|+get(): number]</desc>
+<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+<g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+<g stroke="transparent" fill="transparent">
+<rect x="0.0" y="0.0" height="567.0" width="1626.8" stroke="none"></rect>
+</g>
+<g transform="translate(8, 8)" fill="#33322E">
+<g transform="translate(20, 20)" fill="#eee8d5" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal">
+<path d="M235.5 251.4 L92 368 L92 403 L92.0 403.0 " fill="none"></path>
+<path d="M238.8 255.5 L235.5 251.4 L232.1 247.3 L245.8 243.0 Z"></path>
+<path d="M325.1 256.3 L317.5 368 L317.5 388 L317.5 388.0 " fill="none"></path>
+<path d="M330.4 256.7 L325.1 256.3 L319.8 255.9 L326.0 243.0 Z"></path>
+<path d="M426.0 251.4 L569.5 368 L569.5 388 L569.5 388.0 " fill="none"></path>
+<path d="M429.4 247.3 L426.0 251.4 L422.7 255.5 L415.7 243.0 Z"></path>
+<path d="M490.1 238.8 L807.5 368 L807.5 403 L807.5 403.0 " fill="none"></path>
+<path d="M492.1 233.9 L490.1 238.8 L488.1 243.8 L477.8 233.8 Z"></path>
+<g data-name="Button">
+<g fill="#eee8d5" stroke="#33322E" data-name="Button">
+<rect x="183.8" y="105.0" height="138.0" width="294.0" data-name="Button"></rect>
+<path d="M183.8 136.0 L477.8 136.0" fill="none" data-name="Button"></path>
+<path d="M183.8 212.0 L477.8 212.0" fill="none" data-name="Button"></path>
+</g>
+<g transform="translate(183.75, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Button">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Button">
+<a id="src/class/Button.ts.Button" xlink:href="src/class/Button.ts"><text x="139.0" y="13.5" stroke="none" text-anchor="middle" data-name="Button">Button</text></a>
+
+</g>
+</g>
+<g transform="translate(183.75, 136)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Button">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Button">
+<text x="0.0" y="13.5" stroke="none" data-name="Button">+element: HTMLButtonElement</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Button">+watchContainer: HTMLDivElement</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Button">+isPressed: boolean</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Button">+clickHandler: () =&gt; void</text>
+
+</g>
+</g>
+<g transform="translate(183.75, 212)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Button">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Button">
+<text x="0.0" y="13.5" stroke="none" data-name="Button">-handleClick(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="ModeButton">
+<g fill="#eee8d5" stroke="#33322E" data-name="ModeButton">
+<rect x="0.0" y="403.0" height="93.0" width="184.0" data-name="ModeButton"></rect>
+<path d="M0.0 434.0 L184.0 434.0" fill="none" data-name="ModeButton"></path>
+<path d="M0.0 465.0 L184.0 465.0" fill="none" data-name="ModeButton"></path>
+</g>
+<g transform="translate(0, 403)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ModeButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ModeButton">
+<a id="src/class/Button.ts.ModeButton" xlink:href="src/class/Button.ts"><text x="84.0" y="13.5" stroke="none" text-anchor="middle" data-name="ModeButton">ModeButton</text></a>
+
+</g>
+</g>
+<g transform="translate(0, 434)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ModeButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ModeButton">
+<text x="0.0" y="13.5" stroke="none" data-name="ModeButton">+watch: Watch</text>
+
+</g>
+</g>
+<g transform="translate(0, 465)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ModeButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ModeButton">
+<text x="0.0" y="13.5" stroke="none" data-name="ModeButton">+changeMode(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="IncreaseButton">
+<g fill="#eee8d5" stroke="#33322E" data-name="IncreaseButton">
+<rect x="224.0" y="388.0" height="123.0" width="187.0" data-name="IncreaseButton"></rect>
+<path d="M224.0 419.0 L411.0 419.0" fill="none" data-name="IncreaseButton"></path>
+<path d="M224.0 480.0 L411.0 480.0" fill="none" data-name="IncreaseButton"></path>
+</g>
+<g transform="translate(224, 388)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="IncreaseButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="IncreaseButton">
+<a id="src/class/Button.ts.IncreaseButton" xlink:href="src/class/Button.ts"><text x="85.5" y="13.5" stroke="none" text-anchor="middle" data-name="IncreaseButton">IncreaseButton</text></a>
+
+</g>
+</g>
+<g transform="translate(224, 419)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IncreaseButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IncreaseButton">
+<text x="0.0" y="13.5" stroke="none" data-name="IncreaseButton">+watch: Watch</text>
+<text x="0.0" y="28.5" stroke="none" data-name="IncreaseButton">+time: Time</text>
+<text x="0.0" y="43.5" stroke="none" data-name="IncreaseButton">+mode: Number</text>
+
+</g>
+</g>
+<g transform="translate(224, 480)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="IncreaseButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="IncreaseButton">
+<text x="0.0" y="13.5" stroke="none" data-name="IncreaseButton">+increaseTime(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="LightButton">
+<g fill="#eee8d5" stroke="#33322E" data-name="LightButton">
+<rect x="451.0" y="388.0" height="123.0" width="237.0" data-name="LightButton"></rect>
+<path d="M451.0 419.0 L688.0 419.0" fill="none" data-name="LightButton"></path>
+<path d="M451.0 480.0 L688.0 480.0" fill="none" data-name="LightButton"></path>
+</g>
+<g transform="translate(451, 388)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="LightButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="LightButton">
+<a id="src/class/Button.ts.LightButton" xlink:href="src/class/Button.ts"><text x="110.5" y="13.5" stroke="none" text-anchor="middle" data-name="LightButton">LightButton</text></a>
+
+</g>
+</g>
+<g transform="translate(451, 419)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="LightButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="LightButton">
+<text x="0.0" y="13.5" stroke="none" data-name="LightButton">+watch: Watch</text>
+<text x="0.0" y="28.5" stroke="none" data-name="LightButton">+timeDisplay: HTMLElement</text>
+<text x="0.0" y="43.5" stroke="none" data-name="LightButton">+isLightOn: boolean</text>
+
+</g>
+</g>
+<g transform="translate(451, 480)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="LightButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="LightButton">
+<text x="0.0" y="13.5" stroke="none" data-name="LightButton">+toggleLight(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="ResetButton">
+<g fill="#eee8d5" stroke="#33322E" data-name="ResetButton">
+<rect x="728.0" y="403.0" height="93.0" width="159.0" data-name="ResetButton"></rect>
+<path d="M728.0 434.0 L887.0 434.0" fill="none" data-name="ResetButton"></path>
+<path d="M728.0 465.0 L887.0 465.0" fill="none" data-name="ResetButton"></path>
+</g>
+<g transform="translate(728, 403)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ResetButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ResetButton">
+<a id="src/class/Button.ts.ResetButton" xlink:href="src/class/Button.ts"><text x="71.5" y="13.5" stroke="none" text-anchor="middle" data-name="ResetButton">ResetButton</text></a>
+
+</g>
+</g>
+<g transform="translate(728, 434)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ResetButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ResetButton">
+<text x="0.0" y="13.5" stroke="none" data-name="ResetButton">+watch: Watch</text>
+
+</g>
+</g>
+<g transform="translate(728, 465)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ResetButton">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ResetButton">
+<text x="0.0" y="13.5" stroke="none" data-name="ResetButton">+resetTime(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="ClockManager">
+<g fill="#eee8d5" stroke="#33322E" data-name="ClockManager">
+<rect x="517.8" y="105.0" height="138.0" width="233.0" data-name="ClockManager"></rect>
+<path d="M517.8 136.0 L750.8 136.0" fill="none" data-name="ClockManager"></path>
+<path d="M517.8 167.0 L750.8 167.0" fill="none" data-name="ClockManager"></path>
+</g>
+<g transform="translate(517.75, 105)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="ClockManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="ClockManager">
+<a id="src/class/ClockManager.ts.ClockManager" xlink:href="src/class/ClockManager.ts"><text x="108.5" y="13.5" stroke="none" text-anchor="middle" data-name="ClockManager">ClockManager</text></a>
+
+</g>
+</g>
+<g transform="translate(517.75, 136)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ClockManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ClockManager">
+<text x="0.0" y="13.5" stroke="none" data-name="ClockManager">-watches: Watch[]</text>
+
+</g>
+</g>
+<g transform="translate(517.75, 167)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="ClockManager">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="ClockManager">
+<text x="0.0" y="13.5" stroke="none" data-name="ClockManager">+padNumber(): string</text>
+<text x="0.0" y="28.5" stroke="none" data-name="ClockManager">+addWatch(): void</text>
+<text x="0.0" y="43.5" stroke="none" data-name="ClockManager">+changeTimeFormat(): void</text>
+<text x="0.0" y="58.5" stroke="none" data-name="ClockManager">+resetAllClocks(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="Time">
+<g fill="#eee8d5" stroke="#33322E" data-name="Time">
+<rect x="790.8" y="15.0" height="318.0" width="242.0" data-name="Time"></rect>
+<path d="M790.8 46.0 L1032.8 46.0" fill="none" data-name="Time"></path>
+<path d="M790.8 122.0 L1032.8 122.0" fill="none" data-name="Time"></path>
+</g>
+<g transform="translate(790.75, 15)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Time">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Time">
+<a id="src/class/Time.ts.Time" xlink:href="src/class/Time.ts"><text x="113.0" y="13.5" stroke="none" text-anchor="middle" data-name="Time">Time</text></a>
+
+</g>
+</g>
+<g transform="translate(790.75, 46)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Time">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Time">
+<text x="0.0" y="13.5" stroke="none" data-name="Time">+currentTime: Date</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Time">+lastEditedTime: Date</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Time">+timeZone: number</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Time">+is24HourFormat: boolean</text>
+
+</g>
+</g>
+<g transform="translate(790.75, 122)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Time">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Time">
+<text x="0.0" y="13.5" stroke="none" data-name="Time">-updateTimeZone(): void</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Time">+padNumber(): string</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Time">+tick(): void</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Time">+setLastEditedTime(): void</text>
+<text x="0.0" y="73.5" stroke="none" data-name="Time">+clearLastEditedTime(): void</text>
+<text x="0.0" y="88.5" stroke="none" data-name="Time">+getTime(): Date</text>
+<text x="0.0" y="103.5" stroke="none" data-name="Time">+getTimeZone(): number</text>
+<text x="0.0" y="118.5" stroke="none" data-name="Time">+increaseHours(): void</text>
+<text x="0.0" y="133.5" stroke="none" data-name="Time">+increaseMinutes(): void</text>
+<text x="0.0" y="148.5" stroke="none" data-name="Time">+setTimeFormat(): void</text>
+<text x="0.0" y="163.5" stroke="none" data-name="Time">+resetTime(): void</text>
+<text x="0.0" y="178.5" stroke="none" data-name="Time">+formatTime(): string</text>
+<text x="0.0" y="193.5" stroke="none" data-name="Time">+getTimeString(): string</text>
+
+</g>
+</g>
+</g>
+<g data-name="Watch">
+<g fill="#eee8d5" stroke="#33322E" data-name="Watch">
+<rect x="1072.8" y="0.0" height="348.0" width="294.0" data-name="Watch"></rect>
+<path d="M1072.8 31.0 L1366.8 31.0" fill="none" data-name="Watch"></path>
+<path d="M1072.8 227.0 L1366.8 227.0" fill="none" data-name="Watch"></path>
+</g>
+<g transform="translate(1072.75, 0)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="Watch">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="Watch">
+<a id="src/class/Watch.ts.Watch" xlink:href="src/class/Watch.ts"><text x="139.0" y="13.5" stroke="none" text-anchor="middle" data-name="Watch">Watch</text></a>
+
+</g>
+</g>
+<g transform="translate(1072.75, 31)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Watch">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Watch">
+<text x="0.0" y="13.5" stroke="none" data-name="Watch">+time: Time</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Watch">+mode: number</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Watch">+timeDisplay: HTMLDivElement</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Watch">+watchScreen: HTMLDivElement</text>
+<text x="0.0" y="73.5" stroke="none" data-name="Watch">+watchContainer: HTMLDivElement</text>
+<text x="0.0" y="88.5" stroke="none" data-name="Watch">+modeButton: ModeButton</text>
+<text x="0.0" y="103.5" stroke="none" data-name="Watch">+increaseButton: IncreaseButton</text>
+<text x="0.0" y="118.5" stroke="none" data-name="Watch">+lightButton: LightButton</text>
+<text x="0.0" y="133.5" stroke="none" data-name="Watch">+resetButton: ResetButton</text>
+<text x="0.0" y="148.5" stroke="none" data-name="Watch">+isLightOn: boolean</text>
+<text x="0.0" y="163.5" stroke="none" data-name="Watch">+intervalId: number</text>
+<text x="0.0" y="178.5" stroke="none" data-name="Watch">+is24HourFormat: boolean</text>
+
+</g>
+</g>
+<g transform="translate(1072.75, 227)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="Watch">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="Watch">
+<text x="0.0" y="13.5" stroke="none" data-name="Watch">+startTicking(): void</text>
+<text x="0.0" y="28.5" stroke="none" data-name="Watch">+updateTime(): void</text>
+<text x="0.0" y="43.5" stroke="none" data-name="Watch">+setMode(): void</text>
+<text x="0.0" y="58.5" stroke="none" data-name="Watch">+displayTime(): void</text>
+<text x="0.0" y="73.5" stroke="none" data-name="Watch">+increaseTime(): void</text>
+<text x="0.0" y="88.5" stroke="none" data-name="Watch">+setTimeFormat(): void</text>
+<text x="0.0" y="103.5" stroke="none" data-name="Watch">+reset(): void</text>
+
+</g>
+</g>
+</g>
+<g data-name="MyClass">
+<g fill="#eee8d5" stroke="#33322E" data-name="MyClass">
+<rect x="1406.8" y="127.5" height="93.0" width="164.0" data-name="MyClass"></rect>
+<path d="M1406.8 158.5 L1570.8 158.5" fill="none" data-name="MyClass"></path>
+<path d="M1406.8 189.5 L1570.8 189.5" fill="none" data-name="MyClass"></path>
+</g>
+<g transform="translate(1406.75, 127.5)" font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" data-name="MyClass">
+<g transform="translate(8, 8)" fill="#33322E" text-align="center" data-name="MyClass">
+<a id="src/example-unit/example-class.ts.MyClass" xlink:href="src/example-unit/example-class.ts"><text x="74.0" y="13.5" stroke="none" text-anchor="middle" data-name="MyClass">MyClass</text></a>
+
+</g>
+</g>
+<g transform="translate(1406.75, 158.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MyClass">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MyClass">
+<text x="0.0" y="13.5" stroke="none" data-name="MyClass">-aNumber: number</text>
+
+</g>
+</g>
+<g transform="translate(1406.75, 189.5)" font-family="Helvetica" font-size="12pt" font-weight="normal" font-style="normal" data-name="MyClass">
+<g transform="translate(8, 8)" fill="#33322E" text-align="left" data-name="MyClass">
+<text x="0.0" y="13.5" stroke="none" data-name="MyClass">+get(): number</text>
+
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

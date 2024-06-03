@@ -92,14 +92,14 @@ export class ResetButton extends Button {
     watch: Watch;
     
      constructor(watchContainer: HTMLDivElement, watch: Watch) {
-        super(watchContainer, "reset", () => this.resetTime());
+        super(watchContainer, "reset", () => this.resetTime);
         this.element.classList.add("button", "button-reset");
         this.element.textContent = "Reset";
         this.watch = watch;
     }
     
     public resetTime() {
-        this.watch.resetTime();
+        this.watch.reset();
     }  
     
 
