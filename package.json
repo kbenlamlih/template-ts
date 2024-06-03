@@ -1,8 +1,8 @@
 {
   "name": "template-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Template typescript project",
+  "main": "./dist/index.js",
   "scripts": {
     "clean": "rimraf dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +23,6 @@
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "keywords": []
 }
