@@ -35,8 +35,12 @@ export class ClockManager {
     }
 
     animateAllClocks() {
-        
-        setInterval(() => {
+
+        if (this.animationInterval) {
+            clearInterval(this.animationInterval);
+        }
+
+        this.animationInterval = setInterval(() => {
             this.watches.forEach((watch, index) => {
                 const angle = Math.random() * 360;
                 const scale = 0.5 + Math.random() * 1.5;
@@ -53,7 +57,7 @@ export class ClockManager {
 
                 watch.setTransform(transformedVector, angle, scale, scaleDirection);
             });
-        }, 16); 
+        }, 16) as unknown as number; ; 
     }
 
     stopAnimation() {
