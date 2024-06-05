@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const timezoneSelect = document.getElementById('timezone-select') as HTMLSelectElement;
     const formatButton = document.getElementById('format') as HTMLButtonElement;
     const resetButton = document.getElementById('reset-all') as HTMLButtonElement;
+    const animate = document.getElementById('animate') as HTMLButtonElement;
+    const stopAnimate = document.getElementById('stop') as HTMLButtonElement;
+
 
 
     const clockManager = new ClockManager();
@@ -23,4 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
     resetButton.addEventListener('click', () => {
         clockManager.resetAllClocks();
     });
+
+    animate.addEventListener('click', () => {
+        clockManager.animateAllClocks();
+    });
+
+    stopAnimate.addEventListener('click', () => clockManager.stopAnimation());
+
+
+
 });

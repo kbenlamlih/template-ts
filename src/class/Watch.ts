@@ -2,6 +2,8 @@
 import { Time } from './Time';
 import { ModeButton, IncreaseButton, LightButton, ResetButton } from "./Button";
 
+import { Matrix3, Vector2 } from './Maths';
+
 export class Watch {
     time: Time;
     mode: number;
@@ -15,6 +17,12 @@ export class Watch {
     isLightOn: boolean;
     intervalId: number | null;
     is24HourFormat: boolean; 
+
+/// PART C : 
+    position: Vector2;
+    rotationAngle: number;
+    scaleFactor: number;
+
 
     constructor(timeZone: number, is24HourFormat: boolean) {
         this.time = new Time(timeZone, is24HourFormat);
@@ -46,6 +54,14 @@ export class Watch {
         this.increaseButton = new IncreaseButton(this.watchContainer, this);
         this.lightButton = new LightButton(this.watchContainer, this);
         this.resetButton = new ResetButton(this.watchContainer, this);
+
+
+        const watchXCenter = this.watchContainer.offsetWidth / 2;
+        const watchYCenter = this.watchContainer.offsetHeight / 2;
+        this.position = new Vector2(watchXCenter, watchYCenter);
+
+        this.rotationAngle = 0;
+        this.scaleFactor = 1;
 
         this.startTicking();
     }
@@ -92,5 +108,13 @@ export class Watch {
         this.time.resetTime();
         this.updateTime();
     }
+
+    setTransform(vector: Vector2, angle: number, scale: number, scaleDirection: number) {
+        this.watchContainer.style.transform = `
+          translate(${vector.x}px, ${vector.y}px)
+          rotate(${angle}deg)
+          scale(${scale})
+        `;
+      }
 
 }
